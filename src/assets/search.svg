@@ -1,0 +1,20 @@
+<svg class="search-svg disabled" width="25px" height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.37 23.37">       <defs>
+                                    <style>
+                                        .handle{stroke:auto;}
+                                        .handle,.handle2{stroke-linecap:round;stroke-linejoin:round;}
+                                        .handle,.handle2,.glass{fill:none;stroke-width:2.1px;}
+                                        .handle2{stroke:auto;}
+                                        .glass{stroke:auto;stroke-miterlimit:10;}
+                                        .handle3{opacity:0;stroke:auto;stroke-width:1.7px;stroke-linecap:round;stroke-linejoin:round;}
+                                    </style>
+                                    </defs><!-- Designed by Eylam Zrihan @eylamz -->
+                                    <g id="a"></g>
+                                    <g id="b">
+                                        <g id="c">
+                                        <circle class="glass" cx="10.47" cy="10.47" r="9.12"></circle>
+                                        <g>
+                                            <line class="handle" x1="17.06" y1="17.06" x2="22.02" y2="22.02"></line>
+                                            <line class="handle3" x1="8.5" y1="14.95" x2="14.95" y2="8.5"></line>
+                                        </g>
+                                    </g>
+                                </g></svg>
