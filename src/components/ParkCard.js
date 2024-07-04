@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReactComponent as Netanya } from '../assets/images/Park480-webp/netanya.webp';
 
 function ParkCard({park}) {
   return (
@@ -8,6 +9,8 @@ function ParkCard({park}) {
               <div className='cardInfo'>
                 <h3>{park.parkName}</h3>
                 <p>{park.areaHeb}</p>
+                <img src="../../src/assets/images/Park480-webp/netanya.webp" />
+
               </div>
             </div>
           </div>
