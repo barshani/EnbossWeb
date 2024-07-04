@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import '../styles/homePage.css';
+import React, { useEffect, useState } from 'react';
 import { getProducts } from '../services/apiService';
-import ProductCard from '../components/ProductCard';
-export interface Product{
+
+export interface Product {
   _id: string;
   productName: string;
   size: string;
@@ -22,15 +21,17 @@ function HomePage() {
       setProducts(json);
     });
   }, []);
+
+  console.log(products);
+
   return (
-    <section className='shopCards'>
-      <div className='productCards'>
-        {products.map((product)=>(
-          <ProductCard product={product}/>
-        ))}
-        </div>
-      </section>
-  )
+    <div>
+    
+      {products.map((product) => (
+        <div key={product._id}>{product.productName}</div>
+      ))}
+    </div>
+  );
 }
 
-export default HomePage
+export default HomePage;

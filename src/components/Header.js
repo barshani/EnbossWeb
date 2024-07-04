@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import '../styles/Header.css';
-import { ReactComponent as Logo } from '../assets/logo.svg';
-import { ReactComponent as Cart } from '../assets/cart.svg';
-import { ReactComponent as Account } from '../assets/account.svg';
-import { ReactComponent as Search } from '../assets/search.svg';
-import { ReactComponent as Language } from '../assets/language.svg';
+import '../styles/header.css';
+import { ReactComponent as Logo } from '../assets/svg/logo.svg';
+import { ReactComponent as Cart } from '../assets/svg/cart.svg';
+import { ReactComponent as Account } from '../assets/svg/account.svg';
+import { ReactComponent as Search } from '../assets/svg/search.svg';
+import { ReactComponent as Language } from '../assets/svg/language.svg';
 
 
 function Header(){
 const [svgSearch,setSvgSearched] = useState('')
+const [grow,setGrow] = useState('')
 return(
   <div className="headerWrap">
     <div className="header">
-    <Logo className="logo" />
+    <Logo className="headLogo" />
     <nav className='headNav'>
         <ul>
             <li><a href="#">צור קשר</a></li>
@@ -23,8 +24,21 @@ return(
         </ul>
      </nav>
      <div className='headIcons'>
+     <input type="text" className={`headSearch ${grow}`} placeholder="חיפוש" autocomplete="off" onchange="openPage()"/>
+        <Search className={"search-svg " + svgSearch} onClick={()=>{
+         if(svgSearch===''||svgSearch==='disabled'){
+            setSvgSearched('clicked')
+            setGrow('grow')
+         }
+          else {
+            setSvgSearched('disabled')
+            setGrow('shrink')
+          }
 
-        <Search className={"search-svg " + svgSearch} onClick={()=>svgSearch===''||svgSearch==='disabled'?setSvgSearched('clicked'):setSvgSearched('disabled')} src={Search} />
+         }
+        }
+         src={Search}/>
+
         <Cart/>
         <Account/>
         <Language/>
