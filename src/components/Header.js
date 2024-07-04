@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/header.css';
+import '../styles/hebrewStyles/header.css';
 import { ReactComponent as Logo } from '../assets/svg/logo.svg';
 import { ReactComponent as Cart } from '../assets/svg/cart.svg';
 import { ReactComponent as Account } from '../assets/svg/account.svg';
@@ -13,12 +13,12 @@ const [grow,setGrow] = useState('')
 return(
   <div className="headerWrap">
     <div className="header">
-    <Logo className="headLogo" />
+    <a href="/he"><Logo className="headLogo" /></a>
     <nav className='headNav'>
         <ul>
             <li><a href="#">צור קשר</a></li>
             <li><a href="#">מדריכים</a></li>
-            <li><a href="#">סקייטפארקים</a></li>
+            <li><a href="/he/skateparks">סקייטפארקים</a></li>
             <li><a href="#">חנות</a></li>
             <li><a href="#">עלינו</a></li>
         </ul>
@@ -38,7 +38,6 @@ return(
          }
         }
          src={Search}/>
-
         <Cart/>
         <Account/>
         <Language/>

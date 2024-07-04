@@ -1,0 +1,55 @@
+body {
+    min-height: 100vh;
+    background: var(--bg-gradient), var(--bg-primary);
+  }
+
+.pparkCards {
+    max-width: 1290px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 28px;
+    margin: 0 auto;
+}
+.parkCard {
+  h3 {
+    background-color: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+
+  .price {
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: 235px;
+    max-height: 235px;
+    border-radius: 8px;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.05);
+}
+  .card {
+    direction: rtl;
+    font-family: "Arimo", sans-serif;
+    font-size: 0.875rem;
+    margin: 20px auto;
+    width: 235px;
+    background-color: none;
+
+}
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding: 18px;
+    padding-top: 10px;
+    
+}
+}

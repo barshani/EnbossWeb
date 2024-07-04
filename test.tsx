@@ -1,37 +1,109 @@
-import React, { useEffect, useState } from 'react';
-import { getProducts } from '../services/apiService';
+create table parks (
+  id int primary key AUTO_INCREMENT,
+      parkName varchar (255),
+      parkNameHeb varchar (255),
+      address varchar (255),
+      addressHeb varchar (255),
+      img varchar (255),
+      imgAlt varchar (255),
+      area varchar (255),
+      areaHeb varchar (255),
+      video varchar (255),
+      map varchar (255),
+      lightHourHeb varchar (255),
+      openHourHeb varchar (255),
+      lightHour varchar (255),
+      openHour varchar (255),
+      year int,
+      parking boolean,
+      helmet boolean,
+      cooler boolean,
+      price boolean,
+      shade boolean,
+      food boolean,
+      seat boolean,
+      toilet boolean,
+      guard boolean,
+      bomb boolean,
+      note varchar (255),
+      note1 varchar (255),
+    note2 varchar (255),
+      note3 varchar (255),
+    noteHeb varchar (255),
+      noteHeb1 varchar (255),
+    noteHeb2 varchar (255),
+      noteHeb3 varchar (255)
+  )
 
-export interface Product {
-  _id: string;
-  productName: string;
-  size: string;
-  color: string;
-  img: string;
-  alt: string;
-  category: string;
-  subCategory: string;
-  price: number;
-}
 
-function HomePage() {
-  const [products, setProducts] = useState<Product[]>([]);
+  create table parks (
+    id int primary key AUTO_INCREMENT,
+        "parkName": "",
+        "parkNameHeb": "",
+        "address": "",
+        "addressHeb": "",
+        "img": "",
+        "imgAlt": "",
+        "area": "",
+        "areaHeb": "",
+        "video": "",
+        "map": "",
+        "lightHourHeb": "",
+        "openHourHeb": "",
+        "lightHour": "",
+        "openHour": "",
+        "year":,
+        "parking":,
+        "helmet":,
+        "cooler":,
+        "price":,
+        "shade":,
+        "food":,
+        "seat":,
+        "toilet":,
+        "guard":,
+        "bomb":,
+        "note": "",
+        "note1": "",
+        "note2": "",
+        "note3": "",
+        "noteHeb": "",
+        "noteHeb1": "",
+        "noteHeb2": "",
+        "noteHeb3": ""
+    )
 
-  useEffect(() => {
-    getProducts().then((json: Product[]) => {
-      setProducts(json);
-    });
-  }, []);
 
-  console.log(products);
-
-  return (
-    <div>
-    
-      {products.map((product) => (
-        <div key={product._id}>{product.productName}</div>
-      ))}
-    </div>
-  );
-}
-
-export default HomePage;
+    parkName: joi.string().required().min(2).max(100),
+            parkNameHeb: joi.string().required().min(2).max(100),
+            address: joi.string().required().min(2).max(100),
+            addressHeb: joi.string().required().min(2).max(100),
+            img: joi.string(),
+            imgAlt: joi.string(),
+            area: joi.string().required(),
+            areaHeb: joi.string().required(),
+            video: joi.string(),
+            map: joi.string(),
+            lightHourHeb: joi.string(),
+            openHourHeb: joi.string().required(),
+            lightHour: joi.string(),
+            openHour: joi.string().required(),
+            year: joi.number().required(),
+            parking: joi.boolean().required(),
+            helmet: joi.boolean().required(),
+            cooler: joi.boolean().required(),
+            price: joi.boolean().required(),
+            shade: joi.boolean().required(),
+            food: joi.boolean().required(),
+            seat: joi.boolean().required(),
+            toilet: joi.boolean().required(),
+            guard: joi.boolean().required(),
+            bomb: joi.boolean().required(),
+            note: joi.string(),
+            note1: joi.string(),
+            note2: joi.string(),
+            note3: joi.string(),
+            noteHeb: joi.string(),
+            noteHeb1: joi.string(),
+            noteHeb2: joi.string(),
+            noteHeb3: joi.string(),
