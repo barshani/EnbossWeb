@@ -13,7 +13,7 @@ const [grow,setGrow] = useState('')
 return(
   <div className="headerWrap">
     <div className="header">
-    <a href="/he"><Logo className="headLogo" /></a>
+    <a href="/he" className="headLogo"><Logo/></a>
     <nav className='headNav'>
         <ul>
             <li><a href="#">צור קשר</a></li>

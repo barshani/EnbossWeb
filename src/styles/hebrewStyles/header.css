@@ -1,90 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
-
-:root {
-  /* Primary Colors */
-  --primary: #071c31;
-  --primary-hover: #0d3359;
-  --primary-light: #66b2ff; /* Example: light blue */
-  --primary-dark: #0056b3; /* Example: dark blue */
-
-  /* Secondary Colors */
-  --secondary: #6c757d; /* Example: gray */
-  --secondary-light: #a9aeb4; /* Example: light gray */
-  --secondary-dark: #494e52; /* Example: dark gray */
-
-  /* Accent Colors */
-  --accent: #28a745; /* Example: green */
-  --accent-light: #6cd17a; /* Example: light green */
-  --accent-dark: #1e7031; /* Example: dark green */
-
-  /* Text Colors */
-  --text-primary: var(--primary);
-  --text-secondary: #697172; 
-  --text-light: #071c31cc;
-  --text-dark: #222;
-  --text-muted: #888;
-  --text-hover: var(--primary-hover);
-
-  /* Background Colors */
-  --bg-primary: #eaf1fb;
-  --bg-gradient: linear-gradient(
-    225deg,
-    rgba(249, 240, 235, 0.8) 0%,
-    rgba(219, 232, 250, 0.8) 71.83%,
-    rgba(227, 237, 250, 0.8) 100%
-  );
-  --bg-accent: #e9ecef; /* Example: accent background */
-  --bg-dark: #343a40; /* Example: dark background */
-
-  /* Buttons Colors */
-  --btn-primary: #335799;
-  --btn-light: #8da2c8;
-  --btn-mute: #ececec;
-
-  /* Border Colors */
-  --border: var(--btn-primary);
-  --border-light: var(--btn-light);
-  --border-mute: var(--btn-mute);
-}
-input:focus-visble {
-  border: none;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  list-style: none;
-  list-style-type: none;
-  text-decoration: none;
-  font-weight: unset;
-  word-spacing: unset;
-  letter-spacing: unset;
-  font-family: unset;
-  resize: none;
-  margin: 0;
-}
-
-
-html {
-  line-height: normal;
-  font-size: 16px;
-  box-sizing: inherit;
-  scroll-behavior: smooth;
-  width: -webkit-fill-available;
-}
-
-a,
-button {
-  cursor: pointer;
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
 
 
 .headerWrap {
@@ -118,8 +31,8 @@ input, button, textarea, select {
 .headLogo:hover {
   fill: var(--primary-hover);
 }
+
 .headNav ul {
-  font-family: "Arimo", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -137,22 +50,23 @@ input, button, textarea, select {
   line-height: 100%;
   text-align: center;
   color: var(--primary);
-  padding: 10px; /* Add padding to create space inside the box */
-  border: 1px solid transparent; /* Add a transparent border to maintain size */
+  padding: 6px 10px;
+  border-radius: 5px;
   transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.headNav li:hover {
+  background-color: #e0e0e073;
+  cursor: pointer;
 }
 
 .headNav li a {
   color: var(--primary);
 }
 
-.headNav li:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Light background color on hover */
-  border-radius: 5px; /* Optional: Add border radius */
-  cursor: pointer; /* Change cursor to pointer on hover */
+.headNav li a:hover {
+  color: var(--primary-dark);
 }
-
-
 
 .headIcons {
   height: 24px;
@@ -209,7 +123,8 @@ input, button, textarea, select {
   }
   100% {
     opacity: 0;
-  }}
+  }
+}
 
 .headSearch:focus {
   border: 0.5px solid var(--border);
@@ -373,12 +288,6 @@ input, button, textarea, select {
     transform: translate(100%, -100%);
     opacity: -3;
     stroke: var(--primary);
-
   }
 }
 /* ------ End of Search icon CSS ------ */
-
-
-
-
-

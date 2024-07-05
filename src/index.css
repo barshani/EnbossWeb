@@ -1,6 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  /* Primary Colors */
+  --primary: #071c31;
+  --primary-hover: #0d3359;
+  --primary-light: #66b2ff; /* Example: light blue */
+  --primary-dark: #061728; /* Example: dark blue */
+
+  /* Secondary Colors */
+  --secondary: #6c757d; /* Example: gray */
+  --secondary-light: #a9aeb4; /* Example: light gray */
+  --secondary-dark: #494e52; /* Example: dark gray */
+
+  /* Accent Colors */
+  --accent: #28a745; /* Example: green */
+  --accent-light: #6cd17a; /* Example: light green */
+  --accent-dark: #1e7031; /* Example: dark green */
+
+  /* Text Colors */
+  --text-primary: var(--primary);
+  --text-secondary: #697172;
+  --text-light: #071c31cc;
+  --text-dark: #222;
+  --text-muted: #888;
+  --text-hover: var(--primary-hover);
+
+  /* Background Colors */
+  --bg-primary: #eaf1fb;
+  --bg-gradient: linear-gradient(
+    225deg,
+    rgba(249, 240, 235, 0.8) 0%,
+    rgba(219, 232, 250, 0.8) 71.83%,
+    rgba(227, 237, 250, 0.8) 100%
+  );
+  --bg-accent: #e9ecef; /* Example: accent background */
+  --bg-dark: #343a40; /* Example: dark background */
+
+  /* Buttons Colors */
+  --btn-primary: #335799;
+  --btn-light: #8da2c8;
+  --btn-mute: #ececec;
+
+  /* Border Colors */
+  --border: var(--btn-primary);
+  --border-light: var(--btn-light);
+  --border-mute: var(--btn-mute);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-weight: unset;
+  word-spacing: unset;
+  letter-spacing: unset;
+  font-family: unset;
+  resize: none;
+  margin: 0;
+}
+
+html {
+  line-height: normal;
+  font-size: 16px;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  width: -webkit-fill-available;
+}
+
+a,
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Arimo', apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
