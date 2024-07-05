@@ -124,7 +124,10 @@ input, button, textarea, select {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  column-gap: 30px;
+  column-gap: 5px;
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 
 .headNav li {
@@ -134,15 +137,22 @@ input, button, textarea, select {
   line-height: 100%;
   text-align: center;
   color: var(--primary);
+  padding: 10px; /* Add padding to create space inside the box */
+  border: 1px solid transparent; /* Add a transparent border to maintain size */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .headNav li a {
   color: var(--primary);
 }
 
-.headNav li a:hover{
-  color: var(--primary-hover);
+.headNav li:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light background color on hover */
+  border-radius: 5px; /* Optional: Add border radius */
+  cursor: pointer; /* Change cursor to pointer on hover */
 }
+
+
 
 .headIcons {
   height: 24px;
@@ -167,25 +177,39 @@ input, button, textarea, select {
 
 .headSearch.grow {
   display: block;
-  opacity: 0;
   z-index: 0;
-  animation: searchGrow 0.3s ease-in-out forwards;
+  animation: searchGrow 0.75s ease-in-out forwards;
 }
-.headSearch.shrink {
-  animation: searchGrow 0.3s ease-in-out reverse;
 
+.headSearch.shrink {
+  animation: searchShrink 0.5s ease-in-out forwards;
 }
 
 @keyframes searchGrow {
-  from {
+  0% {
     width: 0;
     opacity: 0;
   }
-  to{
+  10% {
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes searchShrink {
+  0% {
+    display: block;
     width: 100%;
     opacity: 1;
   }
-}
+  90% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }}
 
 .headSearch:focus {
   border: 0.5px solid var(--border);
@@ -198,6 +222,7 @@ input, button, textarea, select {
   margin-bottom: 1px;
   transition: all 0.2s ease;
   z-index: 1;
+  overflow: visible;
 }
 
 .search-svg:hover {
